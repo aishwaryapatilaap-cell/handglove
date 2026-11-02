@@ -1,0 +1,120 @@
+:root{--ink:#1f2933;--muted:#52606d;--line:#d9e0e6;--bg:#f5f7f9;--acc:#1d5c73;--tint:#eef3f6;--ok:#2f7d5b;--warn:#8a5a00;--bad:#b83a3a}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Source Sans 3',system-ui,sans-serif;font-size:16px;color:var(--ink);background:var(--bg);line-height:1.5}
+h1,h2,h3{margin:0;font-weight:600;line-height:1.2}
+a{color:var(--acc)}
+.muted{color:var(--muted)} .small{font-size:14px}
+.center-note{padding:48px;text-align:center;color:var(--muted)}
+.btn{display:inline-block;padding:10px 18px;border-radius:6px;border:1px solid var(--acc);background:var(--acc);color:#fff;font:600 15px inherit;font-family:inherit;text-decoration:none;cursor:pointer}
+.btn:disabled{opacity:.55;cursor:not-allowed}
+.btn-secondary{background:#fff;color:var(--ink);border-color:#b9c4ce}
+.btn-danger{background:#fff;color:var(--bad);border-color:var(--bad)}
+.btn-sm{padding:6px 12px;font-size:14px}
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.field label{font-size:14px;font-weight:600}
+.field input,.field select{padding:11px 12px;border:1px solid #b9c4ce;border-radius:6px;font:inherit;background:#fff}
+.field input:focus,.field select:focus,.btn:focus-visible{outline:2px solid var(--acc);outline-offset:1px}
+.hint{font-size:13px;color:var(--muted)} .hint.ok{color:var(--ok)}
+.alert{padding:12px 14px;border-radius:6px;font-size:15px;margin-bottom:16px;border:1px solid}
+.alert-error{background:#fdf0f0;border-color:#e8bcbc;color:#8f2b2b}
+.alert-info{background:var(--tint);border-color:#c9d9e2;color:#17475a}
+.alert-ok{background:#edf7f2;border-color:#bfdccd;color:#1f5e43}
+.site-nav{display:flex;justify-content:space-between;align-items:center;padding:16px 56px;background:#fff;border-bottom:1px solid var(--line)}
+.site-nav .links{display:flex;gap:12px;align-items:center}
+.brand{font-weight:600;font-size:18px;color:var(--acc)}
+.hero{display:flex;gap:56px;align-items:center;padding:64px 56px;background:#fff}
+.hero>div:first-child{flex:1}
+.eyebrow{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--acc);font-weight:600}
+.hero h1{font-size:40px;margin:14px 0 16px}
+.hero p{font-size:18px;color:var(--muted);margin:0 0 26px;max-width:560px}
+.cols{display:flex;gap:32px;padding:44px 56px}
+.cols>div{flex:1;border-top:2px solid var(--acc);padding-top:14px}
+.cols h3{font-size:18px;margin-bottom:6px} .cols p{margin:0;color:var(--muted)}
+.footer{padding:24px 56px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+.auth-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+.auth-card{width:100%;max-width:440px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:32px}
+.auth-card h1{font-size:24px;margin-bottom:6px}
+.choice{display:flex;gap:10px;margin-bottom:16px}
+.choice label{flex:1;border:1px solid #b9c4ce;border-radius:6px;padding:10px 12px;cursor:pointer;font-size:15px}
+.choice input{margin-right:8px}
+.choice label:has(input:checked){border-color:var(--acc);background:var(--tint)}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:14px;margin-bottom:18px}
+.shell{display:flex;min-height:100vh}
+.sidebar{width:210px;background:#fff;border-right:1px solid var(--line);padding:24px 14px;display:flex;flex-direction:column;position:sticky;top:0;height:100vh}
+.sidebar nav{display:flex;flex-direction:column;gap:4px;margin-top:22px;flex:1}
+.nav-link{padding:10px 12px;border-radius:6px;color:var(--muted);text-decoration:none;font-size:15px}
+.nav-link.active{background:var(--tint);color:var(--acc);font-weight:600}
+.sidebar-foot .who{font-weight:600;font-size:14px;margin-bottom:10px;display:flex;flex-direction:column}
+.sidebar-foot .who span{font-weight:400;color:var(--muted)}
+.content{flex:1;padding:28px 36px;max-width:1100px}
+.page-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px}
+.page-head h1{font-size:24px}
+.card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:20px;margin-bottom:16px}
+.card h2{font-size:17px;margin-bottom:10px}
+.grid2{display:grid;grid-template-columns:2fr 1fr;gap:16px}
+.kv{display:flex;justify-content:space-between;padding:10px 0;border-top:1px solid var(--line);font-size:15px}
+.kv span:first-child{color:var(--muted)} .kv span:last-child{font-weight:600}
+.bar{height:6px;background:#dde5eb;border-radius:3px;margin:8px 0 4px}
+.bar>div{height:6px;background:var(--acc);border-radius:3px}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th{text-align:left;font-size:12px;font-weight:600;color:var(--muted);padding:0 8px 10px}
+td{padding:13px 8px;border-top:1px solid var(--line)}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:8px;background:currentColor}
+.ok{color:var(--ok)} .warn{color:var(--warn)} .bad{color:var(--bad)}
+.code{font-size:30px;font-weight:600;letter-spacing:.18em;color:var(--acc)}
+.row-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+@media (max-width:820px){.hero,.cols{flex-direction:column;padding:32px 20px}.site-nav{padding:14px 20px}.shell{flex-direction:column}.sidebar{width:auto;height:auto;position:static;flex-direction:row;align-items:center;gap:12px;flex-wrap:wrap}.sidebar nav{flex-direction:row;margin:0}.sidebar-foot{margin-left:auto}.grid2{grid-template-columns:1fr}.content{padding:20px}}
+
+/* NeuroKinetics clinical workspace additions */
+textarea{font:inherit;padding:11px 12px;border:1px solid #b9c4ce;border-radius:6px;width:100%;resize:vertical}
+.finger-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.finger-card{margin-bottom:16px}.finger-card strong{display:block;font-size:25px;margin:8px 0}.finger-card small{color:var(--muted)}
+.metric-large{font-size:48px;font-weight:700;color:var(--acc)}.metric-large span{font-size:16px;color:var(--muted);font-weight:400}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.stats-grid .card{display:flex;flex-direction:column;gap:8px}.stats-grid strong{font-size:30px}
+.detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:14px 0}.detail-grid div{display:flex;flex-direction:column;gap:4px;min-width:0;overflow-wrap:anywhere}
+.exercise-option{display:flex;gap:12px;padding:13px 4px;border-top:1px solid var(--line);cursor:pointer}.exercise-option span{display:flex;flex-direction:column}.exercise-option small{color:var(--muted)}
+.table-link{border:0;background:none;color:var(--acc);padding:0;font:inherit;cursor:pointer;text-align:left}
+.message-list{display:flex;flex-direction:column;gap:9px;max-height:320px;overflow:auto;margin:12px 0}.message{max-width:80%;background:var(--tint);border-radius:10px;padding:9px 12px}.message p{margin:0 0 4px}.message small{font-size:11px;color:var(--muted)}.message.mine{align-self:flex-end;background:#e3f1ed}
+.message-compose{display:flex;gap:8px}.message-compose input{flex:1;min-width:0;padding:10px;border:1px solid #b9c4ce;border-radius:6px;font:inherit}
+.dashboard-actions{margin-bottom:16px}
+@media(max-width:900px){.finger-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.detail-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.stats-grid{grid-template-columns:1fr}.message-compose{flex-direction:column}}
+
+/* Therapist clinical workspace */
+.therapist-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:16px}
+.therapist-stats>.card{display:flex;flex-direction:column;gap:5px;margin:0}
+.therapist-stats strong{font-size:30px;color:var(--ink)}
+.therapist-link-card{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.therapist-link-card h2{margin:4px 0}
+.patient-list-head,.section-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:14px}
+.patient-list-head p,.section-heading p{margin:5px 0 0}
+.search-input{max-width:240px;width:100%;padding:10px 12px;border:1px solid #b9c4ce;border-radius:6px;font:inherit}
+.patient-cards{display:flex;flex-direction:column}
+.patient-row-card{display:flex;align-items:center;gap:15px;padding:17px 0;border-top:1px solid var(--line)}
+.patient-avatar{width:44px;height:44px;flex:0 0 44px;border-radius:50%;display:grid;place-items:center;background:var(--tint);color:var(--acc);font-weight:700}
+.patient-row-main{flex:1;min-width:0}
+.patient-name-line{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.patient-meta{display:flex;gap:18px;flex-wrap:wrap;margin-top:8px;font-size:13px;color:var(--muted)}
+.status-pill{display:inline-flex;align-items:center;border-radius:20px;padding:3px 9px;background:#eef1f4;color:var(--muted);font-size:12px;font-weight:600}
+.status-ok{background:#edf7f2;color:var(--ok)}.status-warn{background:#fff5e5;color:var(--warn)}
+.empty-state{padding:28px 12px;text-align:center}.empty-state p{margin:5px 0 0}
+.back-link{display:block;font-size:13px;margin-bottom:7px;text-decoration:none;color:var(--acc)}
+.profile-edit-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 16px}
+.profile-edit-grid .field input,.profile-edit-grid .field select{padding:10px 11px;border:1px solid #b9c4ce;border-radius:6px;font:inherit;background:#fff}
+.profile-edit-grid.compact{grid-template-columns:repeat(3,minmax(0,1fr));gap:0 12px}
+.clinical-info-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:12px}
+.clinical-info-grid>div{background:#f7f9fa;border:1px solid var(--line);border-radius:6px;padding:12px}
+.clinical-info-grid p{margin:5px 0 0;white-space:pre-wrap}
+.exercise-library{background:#f7f9fa;border:1px solid var(--line);border-radius:7px;padding:13px;margin:12px 0}
+.library-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.library-chip{padding:7px 10px;border:1px solid #c6d0d8;border-radius:18px;background:#fff;color:var(--acc);font:inherit;font-size:13px;cursor:pointer}
+.library-chip:disabled{opacity:.55;cursor:default}
+.prescribed-item{border-top:1px solid var(--line);padding:14px 0}
+.prescribed-title{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:10px}
+.prescribed-title>div{display:flex;flex-direction:column;gap:3px}
+.text-danger{border:0;background:none;color:var(--bad);font:inherit;font-size:13px;cursor:pointer}
+.custom-exercise-form{padding:14px;background:#f7f9fa;border-radius:7px;margin:12px 0}
+.live-stats{margin:8px 0 16px}.live-stats>div{background:#f7f9fa;padding:12px;border-radius:6px;display:flex;flex-direction:column;gap:4px}.live-stats strong{font-size:20px}
+.table-scroll{overflow-x:auto}
+@media(max-width:850px){.patient-row-card{align-items:flex-start;flex-wrap:wrap}.patient-row-card>.btn{margin-left:59px}.therapist-link-card{align-items:flex-start;flex-direction:column}.patient-list-head{align-items:flex-start;flex-direction:column}.search-input{max-width:none}.profile-edit-grid.compact{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.therapist-stats{grid-template-columns:1fr}.profile-edit-grid,.profile-edit-grid.compact,.clinical-info-grid{grid-template-columns:1fr}.patient-meta{gap:8px;flex-direction:column}}

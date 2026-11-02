@@ -1,0 +1,275 @@
+/* ═══════════════════════════════════════════════════════════════
+   NEUROKINETICS — Design System (Dual Theme)
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Default: Dark / Codedex Mode */
+  --bg-primary: #0f111a;
+  --bg-secondary: #171926;
+  --bg-card: #1f2233;
+  --bg-card-hover: #262a40;
+  --bg-surface: #2b3047;
+  --bg-nav: #0f111a;
+
+  /* Accent Colors */
+  --accent-cyan: #00e5ff;
+  --accent-teal: #00d4aa;
+  --accent-purple: #c77dff;
+  --accent-pink: #ff5c8a;
+  --accent-green: #39ff14;
+  --accent-amber: #ffbe0b;
+  --accent-red: #ff0054;
+  --accent-yellow: #fde047;
+
+  /* Text */
+  --text-primary: #ffffff;
+  --text-secondary: #a1a8c2;
+  --text-muted: #6b7280;
+
+  /* Fonts */
+  --font-pixel: 'Pixelify Sans', cursive;
+  --font-pixel-alt: 'VT323', monospace;
+  --font-body: 'Pixelify Sans', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Structural Variables */
+  --border-thick: 3px solid #3b4261;
+  --border-light: 2px solid #4a537a;
+  --shadow-solid: 6px 6px 0px 0px #090a0f;
+  --shadow-hover: 8px 8px 0px 0px var(--accent-purple);
+  --text-shadow: 2px 2px 0px #000;
+  --radius-main: 8px;
+  
+  /* Layout */
+  --section-padding: 100px 0;
+  --container-width: 1100px;
+}
+
+/* ── Light Mode Override ── */
+.light-theme {
+  --bg-primary: #f5f7fa;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #edf2f7;
+  --bg-surface: #e2e8f0;
+  --bg-nav: #ffffff;
+
+  /* Darker Accents for better contrast on white */
+  --accent-cyan: #0891b2;
+  --accent-teal: #0d9488;
+  --accent-purple: #9333ea;
+  --accent-pink: #db2777;
+  --accent-green: #16a34a;
+  --accent-amber: #d97706;
+  --accent-red: #dc2626;
+  --accent-yellow: #ca8a04;
+
+  /* Text */
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+
+  /* Professional Fonts (Generic) */
+  --font-pixel: 'Space Grotesk', sans-serif;
+  --font-pixel-alt: 'Space Grotesk', sans-serif;
+  --font-body: 'Space Grotesk', sans-serif;
+  --font-mono: 'Space Grotesk', sans-serif;
+
+  /* Professional Structural Style */
+  --border-thick: 1px solid #e2e8f0;
+  --border-light: 1px solid #f1f5f9;
+  --shadow-solid: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.1);
+  --text-shadow: none;
+  --radius-main: 12px;
+}
+
+/* ── Reset & Base ── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Noise overlay needs to be more subtle in light mode */
+.light-theme .noise-overlay {
+  opacity: 0.03;
+}
+
+a {
+  color: var(--accent-cyan);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  color: var(--accent-purple);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ── Utility: Container ── */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── Utility: Pixel Heading ── */
+.pixel-heading {
+  font-family: var(--font-pixel);
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  color: var(--accent-yellow);
+  text-shadow: var(--text-shadow);
+  margin-bottom: 12px;
+}
+
+/* ── Utility: Section Title ── */
+.section-title {
+  font-family: var(--font-pixel);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.1;
+  margin-bottom: 20px;
+  text-shadow: var(--text-shadow);
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 650px;
+  line-height: 1.6;
+  font-family: var(--font-body);
+}
+
+/* ── Utility: Glow Text ── */
+.glow-text {
+  color: var(--accent-cyan);
+  text-shadow: var(--text-shadow);
+}
+
+/* ── Utility: Badge ── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  font-family: var(--font-pixel);
+  font-size: 1.1rem;
+  border-radius: var(--radius-main);
+  background: var(--bg-surface);
+  color: var(--accent-green);
+  border: 2px solid var(--accent-green);
+  box-shadow: var(--shadow-solid);
+}
+
+/* ── Utility: Button ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 32px;
+  font-family: var(--font-pixel);
+  font-size: 1.25rem;
+  border-radius: var(--radius-main);
+  border: var(--border-thick);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  text-shadow: var(--text-shadow);
+}
+
+.btn-primary {
+  background: var(--accent-purple);
+  color: #fff;
+  box-shadow: var(--shadow-solid);
+}
+
+.btn-primary:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+.btn-primary:hover {
+  background: var(--accent-purple);
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-solid);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-surface);
+  transform: translateY(-2px);
+}
+
+/* ── Utility: Card ── */
+.card {
+  background: var(--bg-card);
+  border: var(--border-thick);
+  border-radius: var(--radius-main);
+  padding: 32px;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-solid);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--accent-cyan);
+}
+
+/* ── Animations ── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes float-fast {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--bg-surface); border: 2px solid var(--bg-primary); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-purple); }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title { font-size: 2.5rem; }
+  .pixel-heading { font-size: 1.2rem; }
+  .btn { font-size: 1rem; padding: 12px 24px; }
+  :root { --section-padding: 60px 0; }
+}
